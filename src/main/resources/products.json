@@ -1,0 +1,116 @@
+{
+    "products": [
+        {
+            "serialNumber": "1A2",
+            "title": "Bonzo",
+            "category": "Dogs products",
+            "price": 50,
+            "sellerId": "seller_1"
+        },
+        {
+            "serialNumber": "1W3",
+            "title": "Leash",
+            "category": "Dogs products",
+            "price": 40,
+            "sellerId": "seller_2"
+        },
+        {
+            "serialNumber": "5H3",
+            "title": "Bone",
+            "category": "Dogs products",
+            "price": 20,
+            "sellerId": "seller_1"
+        },
+        {
+            "serialNumber": "7U7",
+            "title": "Colar",
+            "category": "Dogs products",
+            "price": 30,
+            "sellerId": "seller_3"
+        },
+        {
+            "serialNumber": "6K7",
+            "title": "Cutting board",
+            "category": "Kitchen products",
+            "price": 20,
+            "sellerId": "seller_2"
+        },
+        {
+            "serialNumber": "9P0",
+            "title": "Blender",
+            "category": "Kitchen products",
+            "price": 60,
+            "sellerId": "seller_3"
+        },
+        {
+            "serialNumber": "5G2",
+            "title": "Pan",
+            "category": "Kitchen products",
+            "price": 40,
+            "sellerId": "seller_1"
+        },
+        {
+            "serialNumber": "6G4",
+            "title": "Knife",
+            "category": "Kitchen products",
+            "price": 30,
+            "sellerId": "seller_2"
+        },
+        {
+            "serialNumber": "6J5",
+            "title": "Windshield wipers",
+            "category": "Car products",
+            "price": 50,
+            "sellerId": "seller_1"
+        },
+        {
+            "serialNumber": "3R3",
+            "title": "Steering wheel",
+            "category": "Car products",
+            "price": 70,
+            "sellerId": "seller_3"
+        },
+        {
+            "serialNumber": "3T1",
+            "title": "Exhaust",
+            "category": "Car products",
+            "price": 50,
+            "sellerId": "seller_3"
+        },
+        {
+            "serialNumber": "8K3",
+            "title": "Tires",
+            "category": "Car products",
+            "price": 80,
+            "sellerId": "seller_3"
+        },
+        {
+            "serialNumber": "7K3",
+            "title": "Basketball",
+            "category": "Sports Products",
+            "price": 60,
+            "sellerId": "seller_2"
+        },
+        {
+            "serialNumber": "2V4",
+            "title": "Running shoes",
+            "category": "Sports Products",
+            "price": 50,
+            "sellerId": "seller_1"
+        },
+        {
+            "serialNumber": "3V8",
+            "title": "Weights",
+            "category": "Sports Products",
+            "price": 50,
+            "sellerId": "seller_2"
+        },
+        {
+            "serialNumber": "3T5",
+            "title": "Ping Pong racket",
+            "category": "Sports Products",
+            "price": 10,
+            "sellerId": "seller_3"
+        }
+    ]
+}

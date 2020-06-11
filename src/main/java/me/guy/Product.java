@@ -5,22 +5,41 @@ import lombok.Setter;
 
 import java.util.Objects;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table
 public class Product {
 
-    private @Id @GeneratedValue @Getter @Setter int serialNumber;
-    private @Getter @Setter String title;
-    private @Getter @Setter String category;
-    private @Getter @Setter int price;
-    private @Getter @Setter int sellerId;
+    @Id
+    /*@GeneratedValue(strategy = GenerationType.IDENTITY)*/
+    @Getter
+    @Setter
+    private String serialNumber;
+
+    @Column
+    @Getter
+    @Setter
+    private String title;
+
+    @Column
+    @Getter
+    @Setter
+    private String category;
+
+    @Column
+    @Getter
+    @Setter
+    private int price;
+
+    @Column
+    @Getter
+    @Setter
+    private String sellerId;
 
     Product() {}
 
-    Product(int serialNumber, String title, String category, int price, int sellerId) {
+    Product(String serialNumber, String title, String category, int price, String sellerId) {
         this.serialNumber = serialNumber;
         this.title = title;
         this.category = category;
