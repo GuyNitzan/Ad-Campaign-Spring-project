@@ -44,6 +44,8 @@ public class Product {
         this.sellerId = sellerId;
     }
 
+    public Product() {}
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
