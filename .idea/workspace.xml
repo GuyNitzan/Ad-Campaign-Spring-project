@@ -2,34 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="349347ee-f665-40b5-a77c-32bbb46bfd96" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/campaign/controller/CampaignParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/campaign/controller/CampaignParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/campaign/dao/CampaignDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/campaign/dao/CampaignDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/campaign/dao/CampaignDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/campaign/dao/CampaignDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/campaign/global/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/campaign/global/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/campaign/model/Campaign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/campaign/model/Campaign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/campaign/service/CampaignServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/campaign/service/CampaignServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/guy/Campaign.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/guy/CampaignController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/guy/CampainStatusEnum.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/guy/MainAppClass.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/guy/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/campaign/controller/CampaignParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/campaign/controller/CampaignParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/campaign/dao/CampaignDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/campaign/dao/CampaignDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/campaign/exceptions/NoCampaignsFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/campaign/exceptions/NoCampaignsFoundException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/campaign/global/Constants$CampainStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/campaign/global/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/campaign/global/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/campaign/model/Campaign.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/campaign/model/Campaign.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/campaign/service/CampaignServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/campaign/service/CampaignServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/guy/Campaign.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/guy/CampaignController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/guy/CampainStatusEnum$CampainStatus.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/guy/CampainStatusEnum.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/guy/MainAppClass.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/guy/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/products.json" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/campaign/global/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -91,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="products.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/products.json">
+      <file leaf-file-name="products.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/products.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+            <state relative-caret-position="163">
+              <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -303,6 +287,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="campaign" type="462c0819:PsiDirectoryNode" />
+              <item name="global" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="campaign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campaign" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="campaign" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -317,10 +310,6 @@
               <item name="campaign" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="campaign" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -438,7 +427,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32843137" />
@@ -673,6 +662,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+          <folding>
+            <element signature="e#222#223#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -680,6 +672,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="49" />
+          <folding>
+            <element signature="e#146#147#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -687,6 +683,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#159#160#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -704,6 +704,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#146#147#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -743,13 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
           <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/campaign/global/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -818,10 +815,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/products.json">
+    <entry file="file://$PROJECT_DIR$/products.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+        <state relative-caret-position="163">
+          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/campaign/global/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
         </state>
       </provider>
     </entry>
