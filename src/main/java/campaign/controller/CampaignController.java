@@ -60,19 +60,26 @@ public class CampaignController {
 
     @GetMapping("/campaigns/{id}")
     public @ResponseBody ResponseEntity<Campaign> getCampaign(@PathVariable("id") Long id) {
-        return ResponseEntity.ok().body(this.campaignService.getCampaign(id));
+        Campaign campaign = this.campaignService.getCampaign(id);
+        return campaign != null ? ResponseEntity.ok().body(campaign) : ResponseEntity.notFound().build();
     }
 
     @PatchMapping("/campaigns/{id}")
     public ResponseEntity changeStatus(@RequestBody ChangeStatusParams newStatus, @PathVariable("id") Long id) {
-        this.campaignService.changeStatus(newStatus, id);
-        return ResponseEntity.ok(String.format("Campaign '%d' status changed to ", id, newStatus.getStatus()));
+        boolean statusChanged = this.campaignService.changeStatus(newStatus, id);
+        if (statusChanged) {
+            return ResponseEntity.ok(String.format("Campaign '%d' status changed to '%s'", id, newStatus.getStatus()));
+        }
+        return ResponseEntity.notFound().build();
     }
 
     @DeleteMapping("/campaigns/{id}")
         public ResponseEntity deleteCampaign(@PathVariable("id") Long id) {
-        this.campaignService.deleteCampaign(id);
-        return ResponseEntity.ok(String.format("Campaign '%d' deleted", id));
+        boolean campaignDeleted = this.campaignService.deleteCampaign(id);
+        if (campaignDeleted) {
+            return ResponseEntity.ok(String.format("Campaign '%d' deleted", id));
+        }
+        return ResponseEntity.notFound().build();
     }
 
 }

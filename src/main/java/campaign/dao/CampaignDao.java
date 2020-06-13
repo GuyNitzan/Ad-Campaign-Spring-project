@@ -25,7 +25,7 @@ public interface CampaignDao {
 
     Campaign getCampaign(Long id);
 
-    void changeStatus(ChangeStatusParams newStatus, Long id);
+    boolean changeStatus(ChangeStatusParams newStatus, Long id);
 
-    void deleteCampaign(Long id);
+    boolean deleteCampaign(Long id);
 }

@@ -54,13 +54,13 @@ public class CampaignServiceImpl implements  CampaignService{
     }
 
     @Override
-    public void changeStatus(ChangeStatusParams newStatus, Long id) {
-        this.campaignDao.changeStatus(newStatus, id);
+    public boolean changeStatus(ChangeStatusParams newStatus, Long id) {
+        return this.campaignDao.changeStatus(newStatus, id);
     }
 
     @Override
-    public void deleteCampaign(Long id) {
-        this.campaignDao.deleteCampaign(id);
+    public boolean deleteCampaign(Long id) {
+        return this.campaignDao.deleteCampaign(id);
     }
 
 }

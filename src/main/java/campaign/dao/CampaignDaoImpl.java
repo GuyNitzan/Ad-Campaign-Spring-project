@@ -41,7 +41,7 @@ public class CampaignDaoImpl implements CampaignDao{
     public void initDB() {
         JSONParser parser = new JSONParser();
         try {
-            JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(Constants.PRODUCTS_JSON_PATH));
+            JSONObject jsonObject = (JSONObject) parser.parse(new FileReader("products.json"));
             JSONArray productsList = (JSONArray) jsonObject.get("products");
             Iterator<JSONObject> iterator = productsList.iterator();
             Transaction transaction = this.productSession.beginTransaction();
@@ -159,20 +159,30 @@ public class CampaignDaoImpl implements CampaignDao{
     }
 
     @Override
-    public void changeStatus(ChangeStatusParams newStatus, Long id) {
+    public boolean changeStatus(ChangeStatusParams newStatus, Long id) {
+        boolean statusUpdated = false;
         Transaction campaignsTransaction = this.campaignSession.beginTransaction();
         Campaign campaign = this.campaignSession.get(Campaign.class, id);
-        campaign.setStatus(newStatus.getStatus());
-        this.campaignSession.save(campaign);
+        if (campaign != null) {
+            campaign.setStatus(newStatus.getStatus());
+            this.campaignSession.save(campaign);
+            statusUpdated = true;
+        }
         campaignsTransaction.commit();
+        return statusUpdated;
     }
 
     @Override
-    public void deleteCampaign(Long id) {
+    public boolean deleteCampaign(Long id) {
+        boolean campaignDeleted = false;
         Transaction campaignsTransaction = this.campaignSession.beginTransaction();
-        Campaign campaign = this.campaignSession.load(Campaign.class, id);
-        this.campaignSession.delete(campaign);
-        this.campaignSession.flush();
+        Campaign campaign = this.campaignSession.get(Campaign.class, id);
+        if (campaign != null) {
+            this.campaignSession.delete(campaign);
+            this.campaignSession.flush();
+            campaignDeleted = true;
+        }
         campaignsTransaction.commit();
+    return campaignDeleted;
     }
 }
