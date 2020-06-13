@@ -17,7 +17,7 @@ public class CampaignParams {
     @Getter
     private String sellerId;
 
-    CampaignParams(@JsonProperty("category") String category,
+    public CampaignParams(@JsonProperty("category") String category,
                    @JsonProperty("bid") Long bid,
                    @JsonProperty("name") String name,
                    @JsonProperty("sellerId") String sellerId) {

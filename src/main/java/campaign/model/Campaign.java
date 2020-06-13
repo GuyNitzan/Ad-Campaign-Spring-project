@@ -37,9 +37,8 @@ public class Campaign {
 
     public Campaign() {}
 
-    public Campaign(String name, Constants.CampaignStatus status, Long bid, String sellerId, String category) {
+    public Campaign(String name, Long bid, String sellerId, String category) {
         this.name = name;
-        this.status = status;
         this.bid = bid;
         this.sellerId = sellerId;
         this.category = category;

@@ -8,8 +8,6 @@ import campaign.exceptions.NoCampaignsFoundException;
 import campaign.exceptions.SellerNotFoundException;
 import campaign.model.Campaign;
 import campaign.model.Product;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import org.json.simple.parser.ParseException;
 
 import java.util.List;
 
@@ -28,4 +26,5 @@ public interface CampaignDao {
     boolean changeStatus(ChangeStatusParams newStatus, Long id);
 
     boolean deleteCampaign(Long id);
+
 }

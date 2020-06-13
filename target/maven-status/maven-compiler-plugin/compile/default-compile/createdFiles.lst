@@ -1,1 +1,16 @@
+campaign\exceptions\ExistingCampaignException.class
+campaign\exceptions\CategoryNotFoundException.class
+campaign\service\CampaignService.class
+campaign\controller\CampaignParams.class
+campaign\exceptions\SellerNotFoundException.class
+campaign\dao\CampaignDao.class
 campaign\model\Product.class
+campaign\service\CampaignServiceImpl.class
+campaign\global\Constants$CampaignStatus.class
+campaign\controller\CampaignController.class
+campaign\dao\CampaignDaoImpl.class
+campaign\global\Constants.class
+campaign\controller\ChangeStatusParams.class
+campaign\MainAppClass.class
+campaign\exceptions\NoCampaignsFoundException.class
+campaign\model\Campaign.class

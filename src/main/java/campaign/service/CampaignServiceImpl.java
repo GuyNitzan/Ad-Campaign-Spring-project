@@ -9,8 +9,6 @@ import campaign.exceptions.NoCampaignsFoundException;
 import campaign.exceptions.SellerNotFoundException;
 import campaign.model.Campaign;
 import campaign.model.Product;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

@@ -41,7 +41,7 @@ public class CampaignDaoImpl implements CampaignDao{
     public void initDB() {
         JSONParser parser = new JSONParser();
         try {
-            JSONObject jsonObject = (JSONObject) parser.parse(new FileReader("products.json"));
+            JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(Constants.PRODUCTS_JSON_PATH));
             JSONArray productsList = (JSONArray) jsonObject.get("products");
             Iterator<JSONObject> iterator = productsList.iterator();
             Transaction transaction = this.productSession.beginTransaction();
