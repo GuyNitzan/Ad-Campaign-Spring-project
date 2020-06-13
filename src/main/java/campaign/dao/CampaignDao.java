@@ -1,7 +1,7 @@
 package campaign.dao;
 
 import campaign.controller.CampaignParams;
-import campaign.controller.ChangeStatusParams;
+import campaign.controller.UpdateCampaignParams;
 import campaign.exceptions.CategoryNotFoundException;
 import campaign.exceptions.ExistingCampaignException;
 import campaign.exceptions.NoCampaignsFoundException;
@@ -23,7 +23,7 @@ public interface CampaignDao {
 
     Campaign getCampaign(Long id);
 
-    boolean changeStatus(ChangeStatusParams newStatus, Long id);
+    boolean updateCampaign(UpdateCampaignParams params, Long id);
 
     boolean deleteCampaign(Long id);
 

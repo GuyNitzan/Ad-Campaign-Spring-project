@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -21,8 +23,12 @@ public class CampaignController {
         this.campaignService = campaignService;
     }
 
+    /*
+    Create a new campaign for a seller's products of some category
+    Body parameter has to be of type 'CampaignParams'
+    */
     @PostMapping("/create-campaign")
-    public @ResponseBody ResponseEntity createCampaign(@RequestBody CampaignParams params) {
+    public @ResponseBody ResponseEntity createCampaign(@Valid @RequestBody CampaignParams params) {
         Campaign createdCampaign;
         try {
             createdCampaign = this.campaignService.createCampaign(params);
@@ -37,8 +43,11 @@ public class CampaignController {
                 .body(createdCampaign);
     }
 
+    /*
+    Return a promoted product of the given category, promoted in the highest bid campaign
+     */
     @GetMapping("/serve-ad")
-    public @ResponseBody ResponseEntity serveAdd(@RequestParam("category") String category) {
+    public @ResponseBody ResponseEntity serveAd(@RequestParam("category") String category) {
         Product product;
         try {
             product = this.campaignService.serveAd(category);
@@ -65,10 +74,10 @@ public class CampaignController {
     }
 
     @PatchMapping("/campaigns/{id}")
-    public ResponseEntity changeStatus(@RequestBody ChangeStatusParams newStatus, @PathVariable("id") Long id) {
-        boolean statusChanged = this.campaignService.changeStatus(newStatus, id);
-        if (statusChanged) {
-            return ResponseEntity.ok(String.format("Campaign '%d' status changed to '%s'", id, newStatus.getStatus()));
+    public ResponseEntity changeStatus(@RequestBody UpdateCampaignParams params, @PathVariable("id") Long id) {
+        boolean updatedSuccessfully = this.campaignService.updateCampaign(params, id);
+        if (updatedSuccessfully) {
+            return ResponseEntity.ok(String.format("Campaign '%d' updated successfully", id));
         }
         return ResponseEntity.notFound().build();
     }
@@ -77,7 +86,7 @@ public class CampaignController {
         public ResponseEntity deleteCampaign(@PathVariable("id") Long id) {
         boolean campaignDeleted = this.campaignService.deleteCampaign(id);
         if (campaignDeleted) {
-            return ResponseEntity.ok(String.format("Campaign '%d' deleted", id));
+            return ResponseEntity.ok(String.format("Campaign '%d' deleted successfully", id));
         }
         return ResponseEntity.notFound().build();
     }

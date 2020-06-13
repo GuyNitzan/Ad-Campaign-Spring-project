@@ -10,7 +10,6 @@ campaign\global\Constants$CampaignStatus.class
 campaign\controller\CampaignController.class
 campaign\dao\CampaignDaoImpl.class
 campaign\global\Constants.class
-campaign\controller\ChangeStatusParams.class
 campaign\MainAppClass.class
 campaign\exceptions\NoCampaignsFoundException.class
 campaign\model\Campaign.class

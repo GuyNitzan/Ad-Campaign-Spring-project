@@ -1,7 +1,7 @@
 package campaign.dao;
 
 import campaign.controller.CampaignParams;
-import campaign.controller.ChangeStatusParams;
+import campaign.controller.UpdateCampaignParams;
 import campaign.exceptions.CategoryNotFoundException;
 import campaign.exceptions.ExistingCampaignException;
 import campaign.exceptions.NoCampaignsFoundException;
@@ -159,17 +159,23 @@ public class CampaignDaoImpl implements CampaignDao{
     }
 
     @Override
-    public boolean changeStatus(ChangeStatusParams newStatus, Long id) {
-        boolean statusUpdated = false;
+    public boolean updateCampaign(UpdateCampaignParams params, Long id) {
+        boolean updatedSuccessfully = false;
         Transaction campaignsTransaction = this.campaignSession.beginTransaction();
         Campaign campaign = this.campaignSession.get(Campaign.class, id);
         if (campaign != null) {
-            campaign.setStatus(newStatus.getStatus());
+            if (params.getStatus() != null) {
+                campaign.setStatus(params.getStatus());
+            }
+            if (params.getBid() != null) {
+                campaign.setBid(params.getBid());
+            }
             this.campaignSession.save(campaign);
-            statusUpdated = true;
+            updatedSuccessfully = true;
         }
         campaignsTransaction.commit();
-        return statusUpdated;
+        logger.info("updated campaign " + id);
+        return updatedSuccessfully;
     }
 
     @Override
@@ -183,6 +189,7 @@ public class CampaignDaoImpl implements CampaignDao{
             campaignDeleted = true;
         }
         campaignsTransaction.commit();
+        logger.info("deleted campaign " + id);
     return campaignDeleted;
     }
 }

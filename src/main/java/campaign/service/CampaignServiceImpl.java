@@ -1,7 +1,7 @@
 package campaign.service;
 
 import campaign.controller.CampaignParams;
-import campaign.controller.ChangeStatusParams;
+import campaign.controller.UpdateCampaignParams;
 import campaign.dao.CampaignDao;
 import campaign.exceptions.CategoryNotFoundException;
 import campaign.exceptions.ExistingCampaignException;
@@ -17,7 +17,7 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service("campaignService")
-public class CampaignServiceImpl implements  CampaignService{
+public class CampaignServiceImpl implements CampaignService{
 
     private CampaignDao campaignDao;
 
@@ -52,8 +52,8 @@ public class CampaignServiceImpl implements  CampaignService{
     }
 
     @Override
-    public boolean changeStatus(ChangeStatusParams newStatus, Long id) {
-        return this.campaignDao.changeStatus(newStatus, id);
+    public boolean updateCampaign(UpdateCampaignParams params, Long id) {
+        return this.campaignDao.updateCampaign(params, id);
     }
 
     @Override
